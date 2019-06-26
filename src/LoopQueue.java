@@ -50,7 +50,7 @@ public class LoopQueue<T> implements Queue<T> {
             resize(data.length / 2);
 
         T result = data[front];
-        data[front] = null;
+//        data[front] = null;
         front = (front + 1) % data.length;
         size--;
 
@@ -89,7 +89,7 @@ public class LoopQueue<T> implements Queue<T> {
         }
 
 //        for (int i = front; i != tail; i = (i + 1) % data.length) {
-//            newData[i - front] = data[i];
+//            newData[(i - front) < 0 ? i : i - front] = data[i];
 //        }
         data = newData;
         front = 0;
