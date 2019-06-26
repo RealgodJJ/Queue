@@ -129,7 +129,7 @@ public class Array<T> {
 
     public String toString() {
         StringBuilder result = new StringBuilder();
-        result.append(String.format("Array: size = %d, capacity = %d\n", size, data.length));
+        result.append(String.format("Array: size = %d, capacity = %d\n", size, getCapacity()));
         result.append("[");
         for (int i = 0; i < size; i++) {
             result.append(data[i]);
